@@ -19,15 +19,15 @@ M2.setSpeed(512)
 while a:
    ns = I2.state()
    if ns != state:
-      print("state(), getCurrentInput():", ns, txt.getCurrentInput(0))
       M2.setSpeed(0)
       a = 0
       state = ns
    txt.updateWait()
 
 M2.setSpeed(-512)
-sleep(0.5)
-M2.setSpeed(0)
+M2.setDistance(30)
+while not M2.finished():
+   txt.updateWait()
 
 
 
@@ -37,7 +37,6 @@ M3.setSpeed(512)
 while a:
    ns = I3.state()
    if ns != state:
-      print("state(), getCurrentInput():", ns, txt.getCurrentInput(0))
       M3.setSpeed(0)
       a = 0
       state = ns
@@ -56,7 +55,6 @@ M1.setSpeed(512)
 while a:
    ns = I1.state()
    if ns != state:
-      print("state(), getCurrentInput():", ns, txt.getCurrentInput(0))
       M1.setSpeed(0)
       a = 0
       state = ns

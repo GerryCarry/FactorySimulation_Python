@@ -45,7 +45,7 @@ def on_message(client, userdata, msg):
         M2.setSpeed(0)
         O6.setLevel(512)
         O5.setLevel(0)
-        sleep(1)
+        sleep(2)
         O6.setLevel(0)
         client.publish("Koho_event_log", "Korong a polírozó állomáson!")
         client.disconnect()

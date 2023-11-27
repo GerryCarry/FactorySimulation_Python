@@ -83,18 +83,21 @@ while exitloop:
         M1.setSpeed(0)
         M4.setSpeed(0)
         client.publish("Sorter_event_log", "Kék korong a tárolóban!")
+        client.publish("control", "VGR_blue")
         exitloop=0
         
     if state_red != state_red_new:
         M1.setSpeed(0)
         M4.setSpeed(0)
         client.publish("Sorter_event_log", "Piros korong a tárolóban!")
+        client.publish("control", "VGR_red")
         exitloop=0
         
     if state_white != state_white_new:
         M1.setSpeed(0)
         M4.setSpeed(0)
         client.publish("Sorter_event_log", "Fehér korong a tárolóban!")
+        client.publish("control", "VGR_white")
         exitloop=0
          
     if measureing == 1:

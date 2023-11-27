@@ -15,5 +15,9 @@ light_sensor_state = I5.state()
 while a:
     light_sensor_new_state = I5.state()
     if light_sensor_new_state != light_sensor_state:
+        print("Megjött!")
         client.publish("control", "Koho_start")
+        client.publish("visszarak", "go")
         a = 0
+        
+print("Koho start Leáll!")
